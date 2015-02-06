@@ -1,0 +1,80 @@
+#accordion-container {
+  max-width:880px;
+  width:98%;
+  margin:20px auto;
+}
+
+
+/* Accordion Layout */
+.accordion-tab {
+  font:bold 16px/36px;
+  font-size:28px;
+  font-family:"Days One",sans-serif;
+  font-weight:400;
+  height:36px;
+}
+
+.accordion-tab {
+  position: relative;
+  display:block;
+  margin-top:4px;
+  padding-left:20px;
+  font:bold 12px/35px "Days One",sans-serif;
+  font-weight:400;
+  text-decoration:none;
+  color:#121212;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+  background:#f3f3f3;
+  border:1px solid #cccccc;
+}
+
+.accordion-tab:after {
+	background-color: #3276b1;
+	line-height:36px;
+	width:26px;
+	height:26px;
+	border-radius:4px;
+	content: '';
+    position: absolute;
+	top:5px; right:13px;
+}
+
+/* OPEN & CLOSE TOGGLE */
+div.accordion-tab:after {
+	background:#3276b1 url('../images/toggle_open.png') center right no-repeat;
+}
+.accordion-tab.active:after {
+	background: #3276b1 url('../images/toggle_closed.png') center right no-repeat;
+}
+
+.accordion-tab:hover,
+.accordion-tab {
+  color:#121212;
+  text-shadow:0 1px 0 rgba(255,255,255,.15);
+  background:#f3f3f3;
+}
+
+.accordion-content {
+  display:none;
+  margin:10px 5px 15px 5px;
+}
+
+.accordion-content ul {
+  margin:10px 0;
+  padding-left:40px;
+  border:none;
+}
+
+.accordion-content:target .content {
+  display:block;
+}
+
+.accordion-content:target {
+  height:360px;
+}
+
+.accordion-tab:hover {
+  cursor:pointer;
+}
